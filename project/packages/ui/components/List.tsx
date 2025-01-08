@@ -8,7 +8,7 @@ interface ListProps {
   pokemon: Pokemon[];
   isLoading: boolean;
   error: string | null;
-  handleDelete:()=>void;
+  handleDelete:(id:number)=>void;
 }
 
 export const List: React.FC<ListProps> = ({ pokemon, isLoading, error,handleDelete }) => {
