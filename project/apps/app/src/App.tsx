@@ -31,6 +31,11 @@ const App = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const handleDelete = (index: number) => {
+    dispatch(deletePokemon(index));
+  };
+
   return (
     <>
       <h1>Pokemon list:</h1>
@@ -38,6 +43,7 @@ const App = () => {
         pokemon={pokemonList?.list || []}
         isLoading={isLoading}
         error={error}
+        handleDelete={handleDelete}
       />
     </>
   );
