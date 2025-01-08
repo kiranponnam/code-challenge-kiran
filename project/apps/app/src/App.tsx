@@ -35,7 +35,11 @@ const App = () => {
   return (
   <>
     <h1>Pokemon list:</h1>
-    <List pokemon={pokemonList} />
+   <List
+        pokemon={pokemonList?.list || []}
+        isLoading={isLoading}
+        error={error}
+      />
   </>
   )
 }
