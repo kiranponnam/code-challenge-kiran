@@ -19,8 +19,7 @@ const App = () => {
       if (!response.ok)
         throw new Error(`Failed to fetch: ${response.statusText}`);
       const data = await response.json();
-      setPokemonList(data)
-      dispatch(setPokemonData(data.results));
+      setPokemonList(data);
     } catch (error: any) {
       setError(error.message || "An unexpected error occurred.");
     } finally {
